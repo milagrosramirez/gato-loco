@@ -1,0 +1,9 @@
+body{
+    background: #00ff9d;
+}
+header{
+    text-align: center;
+}
+#historial ul{
+    list-style: none;
+}

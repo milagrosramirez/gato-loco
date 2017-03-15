@@ -1,0 +1,12 @@
+body{
+    background: #00ff93;
+}
+
+.miTabla td{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+} 
+.movimientos{
+    padding-top: 100px;
+}

@@ -1,0 +1,20 @@
+body{
+    background: #00ff93;
+}
+
+section{
+    text-align: center;
+    padding-top: 0px;
+    padding-left: 10px;
+}
+section input{
+    padding-left: 80px;
+    padding-top: 10px;
+}
+.nombre{
+    padding-top: 20px;
+}
+.boton{
+    padding-left: 500px;
+    padding-top: 30px;
+}
