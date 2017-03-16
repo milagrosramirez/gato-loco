@@ -24,10 +24,30 @@ function clickCelda(evt){
     var celda =evt.target;
     var identificador=evt.target.id;
     //alert(identificador);
-    var numberId = identificador[1];
-    console.log(numberId);
+    var numberId = identificador[1]-1;
+    //console.log(numberId);
+    if(turno=="o"){
+        celda.innerHTML="o";
+        arrays[identificador]="o";
+        turno="x";
+        posibleGanador(turnO);
+        console.log("ganador");
+    }else{
+        celda.innerHTML="x";
+        arrays[identificador]="x";
+        posibleGanador(turnx);
+        turno="o";
+        
+    }
+    
+    
 }
-
+function posibleGanador(_text){
+        if(arrays[0]==_text && arrays[1]==_text && arrays[2] || arrays[3]==_text && arrays[4]==_text && arrays[5] || arrays[6]==_text && arrays[7]==_text && arrays[8] || arrays[0]==_text && arrays[3]==_text && arrays[6] || arrays[1]==_text && arrays[4]==_text && arrays[7] || arrays[2]==_text && arrays[5]==_text && arrays[8] || arrays[0]==_text && arrays[4]==_text && arrays[8] || arrays[2]==_text && arrays[4]==_text && arrays[6]){
+            clickCelda(_text);
+            console.log(_text);
+        }
+    }
 function getHistorial(){
     $.ajax({
         url:'http://test-ta.herokuapp.com/games'
